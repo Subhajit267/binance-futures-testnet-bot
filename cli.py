@@ -149,18 +149,18 @@ def cmd_place(args):
             price=price,
         )
         print(format_order_response(response))
-        print("\n✔ Order placed successfully!\n")
+        print("\n Order placed successfully!\n")
 
     except BinanceAPIError as exc:
-        print(f"\n✘ Binance API error [{exc.code}]: {exc.message}")
+        print(f"\n Binance API error [{exc.code}]: {exc.message}")
         sys.exit(2)
 
     except (ConnectionError, TimeoutError) as exc:
-        print(f"\n✘ Network error: {exc}")
+        print(f"\n Network error: {exc}")
         sys.exit(3)
 
     except Exception as exc:
-        print(f"\n✘ Unexpected error: {exc}")
+        print(f"\n Unexpected error: {exc}")
         sys.exit(4)
 
 
