@@ -50,7 +50,7 @@ def setup_logging(log_level: str = "INFO") -> logging.Logger:
     logger.setLevel(logging.DEBUG)
     logger.handlers.clear()
 
-    # ── File handler (DEBUG + full timestamp) ─────────────────
+    # ------------------------------- File handler (DEBUG + full timestamp) -------------------------------
     file_fmt = logging.Formatter(
         fmt="%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
@@ -59,7 +59,7 @@ def setup_logging(log_level: str = "INFO") -> logging.Logger:
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(file_fmt)
 
-    # ── Console handler (INFO, short timestamp) ────────────────
+    # ------------------------------- Console handler (INFO, short timestamp) -------------------------------
     console_fmt = logging.Formatter(
         fmt="%(asctime)s | %(levelname)-8s | %(message)s",
         datefmt="%H:%M:%S",
