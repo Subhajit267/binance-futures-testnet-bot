@@ -157,9 +157,9 @@ def format_order_response(response: Dict[str, Any]) -> str:
 
     lines = [
         "",
-        "┌─────────────────────────────────────────┐",
-        "│           ORDER RESPONSE DETAILS        │",
-        "└─────────────────────────────────────────┘",
+        " ----------------------------------------- ",
+        "|           ORDER RESPONSE DETAILS        |",
+        " ----------------------------------------- ",
         f"  Order ID     : {order_id}",
         f"  Symbol       : {response.get('symbol',      'N/A')}",
         f"  Side         : {response.get('side',        'N/A')}",
