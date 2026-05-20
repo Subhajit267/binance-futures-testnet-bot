@@ -227,7 +227,7 @@ python cli.py --log-level DEBUG place --symbol BTCUSDT --side BUY --type MARKET 
   Time in Force: GTC
   Updated At   : 1779275183897
 
-✔ Order placed successfully!
+ Order placed successfully!
 ```
 
 ---
