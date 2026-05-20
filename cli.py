@@ -52,7 +52,7 @@ from bot.validators import (
 load_dotenv()
 
 
-# ── Display helpers ───────────────────────────────────────────
+# ----------------------------- Display helpers -------------------------------
 
 def _print_banner():
     """Print the application title banner."""
@@ -78,17 +78,17 @@ def _print_order_summary(symbol, side, order_type, quantity, price):
     """
     label = "Stop Price" if order_type == "STOP_MARKET" else "Price"
 
-    print("\n── Order Request Summary ──────────────────────────")
+    print("\n-- Order Request Summary ---------------------------")
     print(f"  Symbol    : {symbol}")
     print(f"  Side      : {side}")
     print(f"  Type      : {order_type}")
     print(f"  Quantity  : {quantity}")
     if price:
         print(f"  {label:<10}: {price}")
-    print("───────────────────────────────────────────────────")
+    print("------------------------------------------------------")
 
 
-# ── Command handler ───────────────────────────────────────────
+# ------------------------------- Command handler -------------------------------
 
 def cmd_place(args):
     """
@@ -109,7 +109,7 @@ def cmd_place(args):
     """
     setup_logging(args.log_level)
 
-    # ── Validate inputs ───────────────────────────────────────
+    # ------------------------------- Validate inputs -------------------------------
     try:
         symbol     = validate_symbol(args.symbol)
         side       = validate_side(args.side)
@@ -120,7 +120,7 @@ def cmd_place(args):
         print(f"\n✘ Validation error: {exc}")
         sys.exit(1)
 
-    # ── Load credentials ──────────────────────────────────────
+    # ------------------------------- Load credentials -------------------------------
     api_key    = os.getenv("BINANCE_API_KEY",    "").strip()
     api_secret = os.getenv("BINANCE_API_SECRET", "").strip()
 
@@ -132,7 +132,7 @@ def cmd_place(args):
         )
         sys.exit(1)
 
-    # ── Submit ────────────────────────────────────────────────
+    # ------------------------------- Submit -------------------------------
     _print_banner()
     _print_order_summary(symbol, side, order_type, quantity, price)
     print("\n⏳ Submitting order …\n")
@@ -164,7 +164,7 @@ def cmd_place(args):
         sys.exit(4)
 
 
-# ── Argument parser ───────────────────────────────────────────
+# ------------------------------- Argument parser -------------------------------
 
 def _build_parser() -> argparse.ArgumentParser:
     """
@@ -186,7 +186,7 @@ def _build_parser() -> argparse.ArgumentParser:
 
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    # ── 'place' sub-command ───────────────────────────────────
+    # ------------------------------- 'place' sub-command -------------------------------
     place = subparsers.add_parser("place", help="Place a futures order")
     place.add_argument("--symbol",   required=True,
                        help="Trading pair, e.g. BTCUSDT")
@@ -203,7 +203,7 @@ def _build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-# ── Entry point ───────────────────────────────────────────────
+# ------------------------------- Entry point -------------------------------
 
 def main():
     """Parse arguments and dispatch to the appropriate command handler."""
