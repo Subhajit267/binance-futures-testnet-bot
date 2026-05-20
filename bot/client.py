@@ -38,7 +38,7 @@ from .logging_config import get_logger
 
 logger = get_logger("client")
 
-# ── Constants ─────────────────────────────────────────────────
+# ------------------------------- Constants -------------------------------
 
 BASE_URL    = "https://testnet.binancefuture.com"
 RECV_WINDOW = 5000   # Maximum allowed server-client clock skew (ms)
@@ -90,7 +90,7 @@ class BinanceClient:
 
         logger.info("BinanceClient ready (base_url=%s)", self.base_url)
 
-    # ── Internal helpers ──────────────────────────────────────
+    # ------------------------------- Internal helpers -------------------------------
 
     def _sign(self, params: Dict[str, Any]) -> Dict[str, Any]:
         """
@@ -181,7 +181,7 @@ class BinanceClient:
 
         return data
 
-    # ── Public methods ────────────────────────────────────────
+    # ------------------------------- Public methods -------------------------------
 
     def place_algo_order(self, **kwargs) -> Dict[str, Any]:
         """
