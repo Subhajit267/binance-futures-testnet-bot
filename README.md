@@ -248,7 +248,7 @@ python cli.py --log-level DEBUG place --symbol BTCUSDT --side BUY --type MARKET 
 
 | File | Purpose |
 |------|---------|
-| `.env` | API credentials (never committed to git) |
+| `.env` | API credentials  |
 | `logs/trading_bot.log` | All requests, responses, and errors |
 
 ---
