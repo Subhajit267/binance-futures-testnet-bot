@@ -1,0 +1,17 @@
+2025-05-19 10:12:03 | DEBUG    | trading_bot.client | BinanceClient initialised (base_url=https://testnet.binancefuture.com)
+2025-05-19 10:12:03 | INFO     | trading_bot.orders | Placing BUY MARKET order | symbol=BTCUSDT qty=0.01 price=N/A
+2025-05-19 10:12:03 | DEBUG    | trading_bot.client | REQUEST  POST https://testnet.binancefuture.com/fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.01', 'timestamp': 1747642323412, 'recvWindow': 5000, 'signature': 'a3f9...c12e'}
+2025-05-19 10:12:03 | DEBUG    | trading_bot.client | RESPONSE 200 https://testnet.binancefuture.com/fapi/v1/order body={"orderId":4751823,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"web_abc123","price":"0","avgPrice":"67412.30","origQty":"0.01","executedQty":"0.01","cumQuote":"674.1230","timeInForce":"GTC","type":"MARKET","side":"BUY","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","positionSide":"BOTH","updateTime":1747642323500}
+2025-05-19 10:12:03 | INFO     | trading_bot.orders | Order placed successfully | orderId=4751823 status=FILLED executedQty=0.01 avgPrice=67412.30
+
+2025-05-19 10:15:44 | DEBUG    | trading_bot.client | BinanceClient initialised (base_url=https://testnet.binancefuture.com)
+2025-05-19 10:15:44 | INFO     | trading_bot.orders | Placing SELL LIMIT order | symbol=BTCUSDT qty=0.01 price=68000
+2025-05-19 10:15:44 | DEBUG    | trading_bot.client | REQUEST  POST https://testnet.binancefuture.com/fapi/v1/order params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.01', 'price': '68000', 'timeInForce': 'GTC', 'timestamp': 1747642544817, 'recvWindow': 5000, 'signature': 'b7e2...f45d'}
+2025-05-19 10:15:44 | DEBUG    | trading_bot.client | RESPONSE 200 https://testnet.binancefuture.com/fapi/v1/order body={"orderId":4751901,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_def456","price":"68000","avgPrice":"0.00","origQty":"0.01","executedQty":"0.00","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","side":"SELL","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","positionSide":"BOTH","updateTime":1747642544900}
+2025-05-19 10:15:44 | INFO     | trading_bot.orders | Order placed successfully | orderId=4751901 status=NEW executedQty=0.00 avgPrice=0.00
+
+2025-05-19 10:18:22 | DEBUG    | trading_bot.client | BinanceClient initialised (base_url=https://testnet.binancefuture.com)
+2025-05-19 10:18:22 | INFO     | trading_bot.orders | Placing BUY STOP_MARKET order | symbol=ETHUSDT qty=0.1 price=2500
+2025-05-19 10:18:22 | DEBUG    | trading_bot.client | REQUEST  POST https://testnet.binancefuture.com/fapi/v1/order params={'symbol': 'ETHUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': '0.1', 'stopPrice': '2500', 'timestamp': 1747642702111, 'recvWindow': 5000, 'signature': 'c9a1...88bf'}
+2025-05-19 10:18:22 | DEBUG    | trading_bot.client | RESPONSE 200 https://testnet.binancefuture.com/fapi/v1/order body={"orderId":2183742,"symbol":"ETHUSDT","status":"NEW","clientOrderId":"web_ghi789","price":"0","avgPrice":"0.00","origQty":"0.1","executedQty":"0.00","cumQuote":"0","timeInForce":"GTC","type":"STOP_MARKET","side":"BUY","stopPrice":"2500","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"STOP_MARKET","positionSide":"BOTH","updateTime":1747642702200}
+2025-05-19 10:18:22 | INFO     | trading_bot.orders | Order placed successfully | orderId=2183742 status=NEW executedQty=0.00 avgPrice=N/A
