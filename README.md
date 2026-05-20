@@ -211,9 +211,9 @@ python cli.py --log-level DEBUG place --symbol BTCUSDT --side BUY --type MARKET 
 
 ⏳ Submitting order …
 
-┌─────────────────────────────────────────┐
-│           ORDER RESPONSE DETAILS        │
-└─────────────────────────────────────────┘
+ -----------------------------------------
+|           ORDER RESPONSE DETAILS        |
+ -----------------------------------------
   Order ID     : 13167500236
   Symbol       : BTCUSDT
   Side         : BUY
