@@ -197,10 +197,10 @@ python cli.py --log-level DEBUG place --symbol BTCUSDT --side BUY --type MARKET 
 ## 📊 Sample Output
 
 ```
-╔══════════════════════════════════════════════════╗
-║    Binance Futures Testnet Trading Bot v1.0      ║
-║    USDT-M Perpetuals                             ║
-╚══════════════════════════════════════════════════╝
+ --------------------------------------------------
+|    Binance Futures Testnet Trading Bot v1.0      |
+|    USDT-M Perpetuals                             |
+ --------------------------------------------------
 
 ── Order Request Summary ──────────────────────────
   Symbol    : BTCUSDT
@@ -212,7 +212,7 @@ python cli.py --log-level DEBUG place --symbol BTCUSDT --side BUY --type MARKET 
 ⏳ Submitting order …
 
 ┌─────────────────────────────────────────┐
-│           ORDER RESPONSE DETAILS         │
+│           ORDER RESPONSE DETAILS        │
 └─────────────────────────────────────────┘
   Order ID     : 13167500236
   Symbol       : BTCUSDT
