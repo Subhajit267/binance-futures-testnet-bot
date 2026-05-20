@@ -31,7 +31,7 @@ from .logging_config import get_logger
 logger = get_logger("orders")
 
 
-# ── Parameter builder ─────────────────────────────────────────
+# ------------------------------- Parameter builder -------------------------------
 
 def _build_order_params(
     symbol:     str,
@@ -83,7 +83,7 @@ def _build_order_params(
     return params
 
 
-# ── Placement ─────────────────────────────────────────────────
+# ------------------------------- Placement -------------------------------
 
 def place_order(
     client:     BinanceClient,
@@ -136,7 +136,7 @@ def place_order(
     return response
 
 
-# ── Formatting ────────────────────────────────────────────────
+# ------------------------------- Formatting -------------------------------
 
 def format_order_response(response: Dict[str, Any]) -> str:
     """
@@ -158,7 +158,7 @@ def format_order_response(response: Dict[str, Any]) -> str:
     lines = [
         "",
         "┌─────────────────────────────────────────┐",
-        "│           ORDER RESPONSE DETAILS         │",
+        "│           ORDER RESPONSE DETAILS        │",
         "└─────────────────────────────────────────┘",
         f"  Order ID     : {order_id}",
         f"  Symbol       : {response.get('symbol',      'N/A')}",
