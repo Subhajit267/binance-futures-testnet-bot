@@ -202,12 +202,12 @@ python cli.py --log-level DEBUG place --symbol BTCUSDT --side BUY --type MARKET 
 |    USDT-M Perpetuals                             |
  --------------------------------------------------
 
-── Order Request Summary ──────────────────────────
+-- Order Request Summary ---------------------------
   Symbol    : BTCUSDT
   Side      : BUY
   Type      : MARKET
   Quantity  : 0.01
-───────────────────────────────────────────────────
+------------------------------------------------------
 
 ⏳ Submitting order …
 
